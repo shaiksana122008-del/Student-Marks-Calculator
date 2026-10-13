@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="calculator">
+      <h1>Student Marks Calculator</h1>
+      <p class="subtitle">Enter your marks to calculate the total, average, percentage, and grade.</p>
+
+      <form id="marksForm">
+        <label for="studentName">Student name</label>
+        <input id="studentName" type="text" placeholder="Enter student name" required>
+
+        <div class="subjects">
+          <div class="subject">
+            <label for="maths">Mathematics (out of 100)</label>
+            <input id="maths" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="science">Science (out of 100)</label>
+            <input id="science" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="english">English (out of 100)</label>
+            <input id="english" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="social">Social Studies (out of 100)</label>
+            <input id="social" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="computer">Computer (out of 100)</label>
+            <input id="computer" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+        </div>
+
+        <button type="submit">Calculate Results</button>
+      </form>
+
+      <section id="results" class="results" aria-live="polite" hidden>
+        <h2>Results</h2>
+        <p id="resultName" class="result-name"></p>
+        <div class="result-grid">
+          <div class="result-card"><span>Total Marks</span><strong id="total">0 / 500</strong></div>
+          <div class="result-card"><span>Average</span><strong id="average">0</strong></div>
+          <div class="result-card"><span>Percentage</span><strong id="percentage">0%</strong></div>
+          <div class="result-card"><span>Grade</span><strong id="grade">-</strong></div>
+        </div>
+        <p id="status" class="status"></p>
+      </section>
+    </section>
+    <footer>Student Marks Calculator · Beginner HTML, CSS &amp; JavaScript project</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
